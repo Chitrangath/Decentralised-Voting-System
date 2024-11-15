@@ -1,0 +1,104 @@
+/* Reset default margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    text-align: center;
+}
+
+/* Main container */
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.2s ease-out;
+}
+
+/* Title styling */
+h1 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    color: #4caf50;
+}
+
+/* Form group styling */
+.form-group {
+    margin: 20px 0;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+/* Input fields */
+input {
+    width: 80%;
+    padding: 12px;
+    margin: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+/* Focus effect on input */
+input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+/* Button styling */
+button {
+    width: 80%;
+    padding: 12px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #218838;
+}
+
+/* Custom message box styling */
+.message-box {
+    width: 90%;
+    margin-top: 20px;
+    padding: 15px;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    margin: 10px auto;
+    text-align: center;
+    opacity: 0;
+    animation: fadeInMessage 1.5s forwards;
+}
+
+/* Fade-in animation for the container */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Fade-in animation for messages */
+@keyframes fadeInMessage {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}

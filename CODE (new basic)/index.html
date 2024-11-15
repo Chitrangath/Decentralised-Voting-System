@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decentralized Voting System</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- WEB3 INITILIZAION -->
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js/dist/web3.min.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Decentralized Voting System</h1>
+
+        <!-- Register Voter Section -->
+        <div class="form-group">
+            <h3>Register Voter</h3>
+            <input type="number" id="voterAge" placeholder="Age" />
+            <input type="text" id="voterAadhar" placeholder="Aadhar Number" />
+            <input type="text" id="voterID" placeholder="Voter ID" />
+            <button onclick="registerVoter()">Register Voter</button>
+        </div>
+
+        <!-- Register Candidate Section -->
+        <div class="form-group">
+            <h3>Register Candidate</h3>
+            <input type="text" id="candidateName" placeholder="Candidate Name" />
+            <input type="number" id="candidateAge" placeholder="Age" />
+            <input type="number" id="candidateID" placeholder="Candidate ID" />
+            <button onclick="registerCandidate()">Register Candidate</button>
+        </div>
+
+        <!-- Vote Section -->
+        <div class="form-group">
+            <h3>Cast Your Vote</h3>
+            <input type="text" id="candidateToVote" placeholder="Candidate Name" />
+            <button onclick="vote()">Vote</button>
+        </div>
+
+        <!-- Election Result Section -->
+        <div class="form-group">
+            <h3>Election Result</h3>
+            <button onclick="getElectionResult()">Get Election Result</button>
+        </div>
+
+        <!-- View Candidates Section -->
+        <div class="form-group">
+            <h3>View All Candidates</h3>
+            <button onclick="getCandidates()">View Candidates</button>
+        </div>
+
+        <!-- View Votes Section -->
+        <div class="form-group">
+            <h3>View Vote Counts</h3>
+            <button onclick="getVotes()">View Vote Counts</button>
+        </div>
+
+        <!-- Message container for success or error messages -->
+        <div id="message-container"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
